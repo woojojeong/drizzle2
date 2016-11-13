@@ -1,17 +1,15 @@
-<div class='post'>
-
-
-  <div class="content">
-    <%= simple_format @post.content %>
-  </div>
-
-  <div class="user">
-    <strong>Created by </strong>
-    <%= @post.user.present? ? @post.user.email : "an anonymous user" %>,
-    <%= time_ago_in_words(@post.created_at) %> ago
-  </div>
-</div>
-
+<div class="posts-wrapper row">
+  <div class="post">
+    <div class="post-head">
+      <div class="name">
+        <%= @post.user %>
+      </div>
+    </div>
+    <div class="image center-block">
+      <%= image_tag @post.image.url(:medium) %>
+    </div>
+    <p class="content">
+      <%= @post.content %>
 <hr>
 <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-default' %>
 <%= link_to 'Back', posts_path, class: 'btn btn-default' %>
