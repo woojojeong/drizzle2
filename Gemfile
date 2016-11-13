@@ -35,6 +35,8 @@ gem 'authority'  # 권한설정
 gem 'bootstrap-sass'
 gem 'simple_form'
 
+gem "paperclip", "~> 5.0.0"
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
