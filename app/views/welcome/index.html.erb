@@ -1,9 +1,11 @@
 <center>
-<h1>Welcome to</h1>
 
+<h1> Welcome To Drizzle Feminism! </h1>
 <div style="margin-bottom:2em;">
     <img src="/assets/drizzle.png" />
 </div>
+
+
 
 <% if user_signed_in? %>
   <p><%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure?" }, class: 'btn btn-default'%></p>

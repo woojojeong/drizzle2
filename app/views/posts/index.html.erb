@@ -1,11 +1,13 @@
-<h2>Listing posts</h2>
+<center>
+<h2>Daily log</h2>
+<%= link_to 'New Post', new_post_path, class: "btn btn-default" %>
 
 <div class="posts-wrapper row">
   <% @posts.each do |post| %>
     <div class="post">
       <div class="post-head">
         <div class="name">
-          <%= post.user %>
+#          <%= post.user.name %>
         </div>
       </div>
       <div class="image center-block">
@@ -19,10 +21,5 @@
 </div>
 
 
-<%= @posts.each do |post| %>
-  <%=image_tag post.image.url(:medium) %>
-  <%= post.content %>
-<% end %>
 
-<%= link_to 'New Post', new_post_path, class: "btn btn-default" %>
 
