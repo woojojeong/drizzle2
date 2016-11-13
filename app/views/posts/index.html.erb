@@ -16,6 +16,9 @@
       <p class="content">
         <%= post.content %>
       </p>
+      <p style='text-align:right;'>
+      created by <%= post.user.name %>, <%= time_ago_in_words(post.created_at) %> ago
+    </p>
     </div>
   <% end %>
 </div>
