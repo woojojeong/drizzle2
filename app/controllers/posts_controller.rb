@@ -20,6 +20,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    authorize_action_for @post
     @post = Post.find(params[:id])
   end
 
@@ -55,6 +56,7 @@ class PostsController < ApplicationController
   #end
   
 def update  
+  authorize_action_for @post
   @post = Post.find(params[:id])
   @post.update(post_params)
   redirect_to(post_path(@post))
@@ -64,6 +66,7 @@ end
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
+    authorize_action_for @post
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
