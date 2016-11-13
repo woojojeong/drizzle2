@@ -1,8 +1,28 @@
 <h2>Listing posts</h2>
 
+<div class="posts-wrapper row">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="post-head">
+        <div class="name">
+          <%= post.user %>
+        </div>
+      </div>
+      <div class="image center-block">
+        <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
+      </div>
+      <p class="content">
+        <%= post.content %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+
 <%= @posts.each do |post| %>
   <%=image_tag post.image.url(:medium) %>
   <%= post.content %>
 <% end %>
 
 <%= link_to 'New Post', new_post_path, class: "btn btn-default" %>
+
