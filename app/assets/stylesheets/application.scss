@@ -99,3 +99,20 @@ body {
   margin-top: 20px;
   margin-bottom: 40px;
 }
+
+.hotpink {
+  background-color: #fe4365;
+  width: 100%;
+  height: auto;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 1;
+}
+
+.index_image {
+  z-index: 2;
+  position: absolute;
+  margin: auto;
+}

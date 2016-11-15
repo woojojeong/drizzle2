@@ -1,15 +1,8 @@
 <center>
 
-<h1> Welcome To Drizzle Feminism! </h1>
-<div style="margin-bottom:2em;">
-    <img src="/assets/drizzle.png" />
+<div >
+    <img class="index_image" src="/assets/welcome.index.jpg" />
 </div>
 
-
-
-<% if user_signed_in? %>
-  <p><%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure?" }, class: 'btn btn-default'%></p>
-<% else %>
-  <p><%= link_to "로그인", new_user_session_path, class: 'btn btn-default' %></p>
-<% end %>
+<div class="hotpink"></div>
 </center>
