@@ -15,11 +15,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-img {
-	display:block;
-	margin: 0 auto;
-}
-
+/*
+*img {
+*	display:block;
+*	margin: 0 auto;
+*}
+*/
 @import "posts";
 
 body {  
@@ -112,7 +113,19 @@ body {
 }
 
 .index_image {
+  display: inline;
   z-index: 2;
-  position: absolute;
+  position: relative;
+  width: 40%;
+  height: auto;
+  margin: auto;
+}
+
+.div_center {
+}
+
+.index_button {
+  z-index: 3;
+  position: relative;
   margin: auto;
 }
